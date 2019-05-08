@@ -6,12 +6,12 @@ let links = [{
     id: 'link-0',
     url: 'www.howtographql.com',
     description: 'Fullstack tutorial for GraphQL'
-  },
-  {
+},
+{
     id: 'link-1',
     url: 'www.howtographql.com',
     description: 'message 2'
-  },
+},
 ]
 // 2 - implementation of graphql schema. 
 //     structure is identical to the structure of the type definition inside typeDefs: Query.info.
@@ -20,9 +20,9 @@ const resolvers = {
     Query: {
         info: () => 'This is the API of Hackernews Clone',
         feed: () => links,
-        link: (_, args) => { 
+        link: (_, args) => {
             let link = links.filter(link => { return link.id == args.id });
-            return link[0];   
+            return link[0];
         }
     },
     // graphql infers what Link resolver looks like
@@ -32,7 +32,7 @@ const resolvers = {
     //     url: (parent) => parent.url,
     // },
     Mutation: {
-        addLink: (parent, args) => {
+        addLink: (_, args) => {
             const link = {
                 id: `link-${idCount++}`,
                 description: args.description,
@@ -42,6 +42,24 @@ const resolvers = {
             links.push(link);
             return link;
         },
+        deleteLink: (_, args) => {
+            let index = links.findIndex(link => link.id === args.id)
+            links.splice(index, 1);
+            return `${args.id}`
+        },
+        updateLink: (_, args) => {
+            console.log(JSON.stringify(JSON.stringify(args)));
+            let index = links.findIndex(link => link.id === args.id);
+            if (index < 0) {throw new Error('invalid id provided')}
+            if (args.url) {
+                links[index].url = args.url;
+            }
+            if (args.description) {
+                links[index].description = args.description;
+            }
+            return links[index];
+
+        }
     },
 }
 
@@ -52,4 +70,4 @@ const server = new GraphQLServer({
     resolvers,
 })
 
-server.start( () => console.log(`server is running on http://localhost:4000`))
+server.start(() => console.log(`server is running on http://localhost:4000`))
