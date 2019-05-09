@@ -38,18 +38,6 @@ mutation DeleteLink ($id: ID!) {
   "id": "link-0"
 }
 
-https://www.howtographql.com/graphql-js/4-adding-a-database/
-
-yarn global add prisma
-
-prisma deploy
-
-prisma generate
-
-yarn add prisma-client-lib
-
-
-yarn add jsonwebtoken bcryptjs
 
 
 
@@ -97,3 +85,17 @@ mutation {
     }
   }
 }
+
+
+
+https://www.howtographql.com/graphql-js/4-adding-a-database/
+
+yarn global add prisma
+
+prisma deploy
+
+prisma generate
+
+yarn add prisma-client-lib
+
+yarn add jsonwebtoken bcryptjs
