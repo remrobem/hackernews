@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
+    "babel": "^6.23.0",
     "bcryptjs": "^2.4.3",
     "graphql-yoga": "^1.17.4",
     "jsonwebtoken": "^8.5.1",
     "prisma": "^1.32.2",
     "prisma-client-lib": "^1.30.4"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "jest": "^24.8.0",
+    "jest-babel": "^1.0.1"
   }
 }
