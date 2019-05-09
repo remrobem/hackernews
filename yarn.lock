@@ -503,6 +503,11 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
+
 bignumber.js@7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-7.2.1.tgz#80c048759d826800807c4bfd521e50edbba57a5f"
@@ -2181,7 +2186,7 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
-jsonwebtoken@^8.1.0, jsonwebtoken@^8.3.0:
+jsonwebtoken@^8.1.0, jsonwebtoken@^8.3.0, jsonwebtoken@^8.5.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
   integrity sha512-XjwVfRS6jTMsqYs0EsuJ4LGxXV14zQybNd4L2r0UvbVnSF9Af8x7p5MzbJ90Ioz/9TI41/hTCvznF/loiSzn8w==
@@ -2996,6 +3001,11 @@ prepend-http@^1.0.1:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+prettier@1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
+  integrity sha512-qZDVnCrnpsRJJq5nSsiHCE3BYMED2OtsI+cmzIzF1QIfqm5ALf8tEJcO27zV1gKNKRPdhjO0dNWnrzssDQ1tFg==
+
 prettier@1.16.4:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
@@ -3115,6 +3125,36 @@ prisma-client-lib@1.32.2:
     ws "^6.1.0"
     zen-observable "^0.8.10"
 
+prisma-client-lib@^1.30.4:
+  version "1.30.4"
+  resolved "https://registry.yarnpkg.com/prisma-client-lib/-/prisma-client-lib-1.30.4.tgz#ac0d78a9cc14d0dcdc330a8c02427de4de8fd27b"
+  integrity sha512-M9hXVxf0gkijWZd9iiAxnj91T4nQmsTcoElJlClyz+Afq+ln+ybQHsJi5Fh4g957TTnpMeU0GziGHhgoVlv95g==
+  dependencies:
+    "@types/node" "^10.12.0"
+    "@types/prettier" "^1.13.2"
+    debug "^4.1.0"
+    flow-bin "^0.87.0"
+    graphql-tag "^2.10.0"
+    http-link-dataloader "^0.1.6"
+    jsonwebtoken "^8.3.0"
+    lodash.flatten "^4.4.0"
+    prettier "1.14.3"
+    prisma-datamodel "1.30.4"
+    prisma-generate-schema "1.30.4"
+    subscriptions-transport-ws "^0.9.15"
+    uppercamelcase "^3.0.0"
+    ws "^6.1.0"
+    zen-observable "^0.8.10"
+
+prisma-datamodel@1.30.4:
+  version "1.30.4"
+  resolved "https://registry.yarnpkg.com/prisma-datamodel/-/prisma-datamodel-1.30.4.tgz#fc21cb670498d634db0a63cb440ad4ab29a831a4"
+  integrity sha512-hP4/cuZRF6H+Qc4Hy9Mtg9+rYfVqC7C/wSKr6VCCziY/zUI6vS73A0gQcRLQkGyrDFY4AOpfEMQDnoLJm5i4Yw==
+  dependencies:
+    graphql "^14.0.2"
+    pluralize "^7.0.0"
+    popsicle "10"
+
 prisma-datamodel@1.32.2:
   version "1.32.2"
   resolved "https://registry.yarnpkg.com/prisma-datamodel/-/prisma-datamodel-1.32.2.tgz#509f730c44e92c6a2ece56f90cd8a420154fbcde"
@@ -3140,6 +3180,16 @@ prisma-db-introspection@1.32.2:
     prisma-datamodel "1.32.2"
     prisma-yml "1.32.2"
     scuid "^1.0.2"
+
+prisma-generate-schema@1.30.4:
+  version "1.30.4"
+  resolved "https://registry.yarnpkg.com/prisma-generate-schema/-/prisma-generate-schema-1.30.4.tgz#ee0cd9101bf90cdd594d3240aab7b5b3a3d1508e"
+  integrity sha512-MvreEwsrKmBF7yi7/AmktdLuQuvinx7U+foCG1Pg2gpONnTMqt3h/S8y+D3k0dA8/yfy3dLnOczVfMlp38ppxg==
+  dependencies:
+    graphql "^14.0.2"
+    pluralize "^7.0.0"
+    popsicle "10"
+    prisma-datamodel "1.30.4"
 
 prisma-generate-schema@1.32.2:
   version "1.32.2"
