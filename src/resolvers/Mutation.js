@@ -48,7 +48,7 @@ async function signup(parent, args, context, info) {
       postedBy: { connect: { id: userId } },
     })
   }
-  
+
   module.exports = {
     signup,
     login,
