@@ -5,6 +5,7 @@ const Mutation = require('./resolvers/Mutation')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
 const Subscription = require('./resolvers/Subscription')
+const Vote = require('./resolvers/Vote')
 // 1 - schema
 
 // let links = [{
@@ -80,7 +81,8 @@ const resolvers = {
     Mutation,
     Subscription,
     User,
-    Link
+    Link,
+    Vote,
   }
 // 3 - schema and resolvers are bundled and passed to the GraphQLServer which is imported from graphql-yoga
 //     tells the server what API operations are accepted and how they should be resolved.
