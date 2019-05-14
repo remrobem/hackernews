@@ -87,6 +87,71 @@ mutation {
 }
 
 
+subscription {
+  newLink {
+      id
+      url
+      description
+      postedBy {
+        id
+        name
+        email
+      }
+  }
+}
+
+
+subscription {
+  newVote {
+    id
+    link {
+      url
+      description
+    }
+    user {
+      name
+      email
+    }
+  }
+}
+
+
+mutation {
+  vote(linkId: "cjvmpvt7y2sqw0b99u7d9xkk4") {
+    link {
+      url
+      description
+    }
+    user {
+      name
+      email
+    }
+  }
+}
+
+
+query {
+  feed(filter:"QL") {
+    id
+  	description
+    url
+    postedBy {
+      id
+      name
+    }
+  }
+}
+
+query {
+  feed(
+    first: 1
+    skip: 1
+  ) {
+    id
+    description
+    url
+  }
+}
 
 https://www.howtographql.com/graphql-js/4-adding-a-database/
 
